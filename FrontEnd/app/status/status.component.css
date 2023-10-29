@@ -1,0 +1,38 @@
+ /* Add this CSS in your style file or in a <style> tag in your HTML file */
+
+/* Gradient color for buttons */
+button {
+    background: linear-gradient(to right,purple,purple); /* Adjust the color codes as needed */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+   
+
+  /* Red color for high priority and high severity incidents */
+  ul.showHighPriorityList li {
+    border: 1px solid #ff4d4d; /* Red border */
+    background-color: #ffe6e6; /* Light red background */
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Highlighted button */
+  button.highlighted {
+    background: linear-gradient(to right, #ff6347, #ff4500); /* Gradient with red tones */
+  }
+  .alert.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    max-width: 400px; /* Set a maximum width for the success message box */
+    width: 100%; /* Ensure it takes the full width within the specified maximum */
+    margin-left: auto; /* Center the box horizontally */
+    margin-right: auto; /* Center the box horizontally */
+  }

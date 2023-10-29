@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  
+  <nav>
+    <ul class="nav__links">
+      <li  *ngIf="isUser()"> 
+        <a routerLink="/network" class="nav__link">NetworkElements</a>
+      </li>
+      <li *ngIf="isHardware()||isConnectivity()">
+        <a routerLink="/Ticketsme" class="nav__link">Tickets Assigned To me </a>
+      </li>
+
+      <li *ngIf="isHardware()">
+        <a routerLink="/hardware" class="nav__link">Hardware Issues</a> 
+      </li>
+      
+      <li *ngIf="isHardware()||isConnectivity()">
+        <a routerLink="/dueToday" class="nav__link">DueToday</a>
+      </li>
+      <li *ngIf="isHardware()||isConnectivity()">
+        <a routerLink="/status" class="nav__link">Status</a>
+      </li>
+      <li *ngIf= "isConnectivity()">
+        <a routerLink="/connectivity" class="nav__link">Connectivity Issues</a>
+      </li>
+     
+     
+      <li *ngIf="isHardware()||isConnectivity()">
+        <a routerLink="/Search" class="nav__link"><img src="https://prodaptcloud-my.sharepoint.com/:i:/r/personal/hyndavi_r_prodapt_com/Documents/Pictures/search.png?csf=1&web=1&e=QdMsQ8">
+          Search</a>
+      </li>
+     
+     
+      <li *ngIf="isUser()">
+        <a routerLink="/incident" class="nav__link" >Create Ticket</a>
+      </li>
+
+      <li *ngIf="isUser()">
+        <a href="/myList" class="nav__link" >My Tickets</a>
+      </li>
+ 
+    
+    </ul>
+  </nav>
+
+  <div class="content">
+   
+    <router-outlet></router-outlet>
+  </div>
+  <div class="login-link">
+    <li>
+      <a href="/login" class="login-link">Login</a>
+    </li>
+  </div>
+</body>
+</html>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display:flex;
+  }
+  .content {
+      flex: 1;
+      padding: 10px;
+      background-color:  #ade6bbe3;
+    }
+    .login-link {  
+      flex:0.2;
+      background-color:  #ade6bbe3;
+    }
+  nav {
+    background-color: #333;
+    padding: 10px;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+      width: 200px; /* Set the width of the sidebar */
+      color: #fff; 
+  }
+  .nav__link img {
+    width: 40x; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 5px; /* Optional: Add some spacing between the image and text */
+  }
+
+  .login-link {
+    margin-top: 0;
+    margin-left: auto;
+    /* Add any additional styles as needed */
+}
+
+  .nav__links {
+    list-style: none;
+    padding: 0;
+    display: flex; 
+      flex-direction: column; 
+  }
+
+  .nav__link {
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+    transition: color 0.3s;
+  }
+
+  .nav__link:hover {
+    color: #ffd700; 
+  } 
+  .nav__link:hover::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #ffd700;
+    animation: underline 0.3s forwards;
+  }
+
+  @keyframes underline {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  } nav {
+  background: linear-gradient(to right, #4CAF50, #2196F3);
+}
+
+</style> 
