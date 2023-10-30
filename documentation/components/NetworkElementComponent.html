@@ -1,0 +1,918 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>network-inventory documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">network-inventory documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  NetworkElementComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/network-element/network-element.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-network-element</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./network-element.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./network-element.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#networkElements" >networkElements</a>
+                            </li>
+                            <li>
+                                <a href="#newComponent" >newComponent</a>
+                            </li>
+                            <li>
+                                <a href="#newNetworkElement" >newNetworkElement</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addComponent" >addComponent</a>
+                            </li>
+                            <li>
+                                <a href="#addNetworkElement" >addNetworkElement</a>
+                            </li>
+                            <li>
+                                <a href="#loadNetworkElements" >loadNetworkElements</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(networkElementService: <a href="../injectables/NetworkElementService.html" target="_self">NetworkElementService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/network-element/network-element.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>networkElementService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NetworkElementService.html" target="_self" >NetworkElementService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addComponent"></a>
+                    <span class="name">
+                        <span ><b>addComponent</b></span>
+                        <a href="#addComponent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addComponent(id: number | undefined)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="41"
+                                    class="link-to-prism">src/app/network-element/network-element.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                        <code>number | undefined</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addNetworkElement"></a>
+                    <span class="name">
+                        <span ><b>addNetworkElement</b></span>
+                        <a href="#addNetworkElement"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addNetworkElement()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="31"
+                                    class="link-to-prism">src/app/network-element/network-element.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadNetworkElements"></a>
+                    <span class="name">
+                        <span ><b>loadNetworkElements</b></span>
+                        <a href="#loadNetworkElements"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadNetworkElements()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="24"
+                                    class="link-to-prism">src/app/network-element/network-element.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="20"
+                                    class="link-to-prism">src/app/network-element/network-element.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="networkElements"></a>
+                    <span class="name">
+                        <span ><b>networkElements</b></span>
+                        <a href="#networkElements"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/NetworkElement.html" target="_self" >NetworkElement[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/network-element/network-element.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="newComponent"></a>
+                    <span class="name">
+                        <span ><b>newComponent</b></span>
+                        <a href="#newComponent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Components.html" target="_self" >Components</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{ componentName: &#x27;&#x27; }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/network-element/network-element.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="newNetworkElement"></a>
+                    <span class="name">
+                        <span ><b>newNetworkElement</b></span>
+                        <a href="#newNetworkElement"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/NetworkElement.html" target="_self" >NetworkElement</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{ id: 0, name: &#x27;&#x27;,type:&#x27;&#x27;,model:&#x27;&#x27;,ipAddress:&#x27;&#x27;,manufacturer:&#x27;&#x27;, components: [],relatedNetworkElements:[]}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/network-element/network-element.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { NetworkElementService } from &#x27;../network-element.service&#x27;;
+import { NetworkElement  } from &#x27;/home/hyndavi24/net/src/app/network-element&#x27;
+import { Components } from &#x27;../component&#x27;;
+ 
+
+@Component({
+  selector: &#x27;app-network-element&#x27;,
+  templateUrl: &#x27;./network-element.component.html&#x27;,
+  styleUrls: [&#x27;./network-element.component.css&#x27;],
+})
+export class NetworkElementComponent implements OnInit { 
+  networkElements: NetworkElement[] &#x3D; [];
+  newNetworkElement: NetworkElement &#x3D; { id: 0, name: &#x27;&#x27;,type:&#x27;&#x27;,model:&#x27;&#x27;,ipAddress:&#x27;&#x27;,manufacturer:&#x27;&#x27;, components: [],relatedNetworkElements:[]};
+  newComponent: Components &#x3D; { componentName: &#x27;&#x27; };
+ 
+  constructor(private networkElementService: NetworkElementService) {}
+
+  ngOnInit(): void {
+    this.loadNetworkElements();
+  }
+
+  loadNetworkElements(): void {
+    this.networkElementService.getAllNetworkElements().subscribe(
+      (data) &#x3D;&gt; (this.networkElements &#x3D; data),
+     
+    );
+  }
+
+  addNetworkElement(): void {
+    this.networkElementService.addNetworkElement(this.newNetworkElement).subscribe(
+      (data) &#x3D;&gt; {
+        this.networkElements.push(data);
+        this.newNetworkElement &#x3D; { id: 0, name: &#x27;&#x27;, type:&#x27;&#x27;,model:&#x27;&#x27;,ipAddress:&#x27;&#x27;,manufacturer:&#x27;&#x27;,components: [] ,relatedNetworkElements:[]};
+      },
+      
+    );
+  }
+
+  addComponent(id: number | undefined): void {
+    if (id !&#x3D;&#x3D; undefined) {
+      this.networkElementService.addComponentToNetworkElement(id, this.newComponent).subscribe(
+        (data) &#x3D;&gt; {
+          const index &#x3D; this.networkElements.findIndex((element) &#x3D;&gt; element.id &#x3D;&#x3D;&#x3D; id);
+          this.networkElements[index] &#x3D; data;
+          this.newComponent &#x3D; {};  
+        },
+        
+      );
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">
+&lt;h2&gt;Network Elements&lt;/h2&gt;
+
+&lt;div *ngFor&#x3D;&quot;let element of networkElements&quot;&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Network Element&lt;/h3&gt;
+    &lt;strong&gt;Name:&lt;/strong&gt;
+    {{ element.name }}&lt;br&gt;
+    
+    &lt;strong&gt;Type:&lt;/strong&gt;
+    {{ element.type }}&lt;br&gt;
+    
+
+    &lt;strong&gt;IP Address:&lt;/strong&gt;
+    {{ element.ipAddress }}&lt;br&gt;
+    
+    
+    &lt;strong&gt;Model:&lt;/strong&gt;
+    {{ element.model }}&lt;br&gt;
+    
+    &lt;strong&gt;Manufacturer:&lt;/strong&gt;{{ element.manufacturer }}
+    &lt;h4&gt;Components&lt;/h4&gt;
+    &lt;ul&gt;
+      &lt;li *ngFor&#x3D;&quot;let component of element.components&quot;&gt;{{ component.componentName }}&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h4&gt;Connected Elements&lt;/h4&gt;
+    &lt;ul&gt;
+      &lt;li *ngIf&#x3D;&quot;element.type &#x3D;&#x3D;&#x3D; &#x27;Router&#x27;&quot;&gt;ONT-1,OLT-1&lt;/li&gt;
+      &lt;li *ngIf&#x3D;&quot;element.type &#x3D;&#x3D;&#x3D; &#x27;ONT&#x27;&quot;&gt;OLT-1&lt;/li&gt;
+      &lt;li *ngIf&#x3D;&quot;element.type &#x3D;&#x3D;&#x3D; &#x27;OLT&#x27;&quot;&gt;ONT-1, Router-1&lt;/li&gt; 
+    &lt;/ul&gt;
+    
+    
+  &lt;form (submit)&#x3D;&quot;addComponent(element.id)&quot;&gt;
+    &lt;label for&#x3D;&quot;componentName&quot;&gt;Component Name:&lt;/label&gt;
+    &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;componentName&quot; [(ngModel)]&#x3D;&quot;newComponent.componentName&quot;  [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; required /&gt;
+    &lt;button type&#x3D;&quot;submit&quot;&gt;Add Component&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+
+&lt;form (submit)&#x3D;&quot;addNetworkElement()&quot;&gt;
+  &lt;h3&gt;Add Network Element&lt;/h3&gt;
+  &lt;label for&#x3D;&quot;name&quot;&gt;Name:&lt;/label&gt;
+  &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;name&quot;  [(ngModel)]&#x3D;&quot;newNetworkElement.name&quot;  [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; required /&gt;
+  &lt;label for&#x3D;&quot;name&quot;&gt;Type:&lt;/label&gt;
+   &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;type&quot;  [(ngModel)]&#x3D;&quot;newNetworkElement.type&quot;  [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; required /&gt;
+   &lt;label for&#x3D;&quot;name&quot;&gt;IpAddress:&lt;/label&gt;
+    &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;ipAddress&quot;  [(ngModel)]&#x3D;&quot;newNetworkElement.ipAddress&quot;  [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; required /&gt;
+    &lt;label for&#x3D;&quot;name&quot;&gt;Model:&lt;/label&gt;
+    &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;model&quot;  [(ngModel)]&#x3D;&quot;newNetworkElement.model&quot;  [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; required /&gt;
+    &lt;label for&#x3D;&quot;name&quot;&gt;Manufacturer:&lt;/label&gt;
+    &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;manufacturer&quot;  [(ngModel)]&#x3D;&quot;newNetworkElement.manufacturer&quot;  [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; required /&gt;
+  &lt;button type&#x3D;&quot;submit&quot;&gt;Add Network Element&lt;/button&gt;
+&lt;/form&gt;  </code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./network-element.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"> /* Reset some default styles */
+body, h1, h2, h3, p, ul, form {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a modern font and gradient background */
+body {
+  background: linear-gradient(to right, #87CEFA, #f8f8f8); /* Gradient from light sky blue to light gray */
+  font-family: &#x27;Arial&#x27;, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Apply some padding and center content */
+.container {
+  max-width: 600px; /* Decreased max-width */
+  margin: 0 auto;
+  padding: 10px; /* Decreased padding */
+}
+
+/* Style the Network Elements section header */
+h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px; /* Decreased margin */
+}
+
+/* Style each network element container */
+div {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px; /* Decreased margin */
+  padding: 10px; /* Decreased padding */
+}
+
+/* Style the form within each network element container */
+form {
+  margin-top: 10px; /* Decreased margin */
+  padding: 10px; /* Decreased padding */
+}
+
+/* Style the &quot;Add Component&quot; button */
+button[type&#x3D;&quot;submit&quot;] {
+  background-color: #e74c3c; /* Professional and catchy red color */
+  color: white;
+  padding: 6px 10px; /* Decreased padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style the horizontal line */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 10px 0; /* Decreased margin */
+}
+
+/* Style the &quot;Add Network Element&quot; form */
+form h3 {
+  font-size: 1.5em; /* Decreased font-size */
+  color: #333;
+  margin-bottom: 10px; /* Decreased margin */
+}
+
+/* Style the &quot;Add Network Element&quot; button */
+form button[type&#x3D;&quot;submit&quot;] {
+  background-color: #9b59b6; /* Professional and catchy purple color */
+  color: white;
+  padding: 8px 12px; /* Decreased padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style labels and input fields */
+label {
+  display: block;
+  margin-top: 10px; /* Decreased margin */
+  font-weight: bold;
+}
+
+input {
+  width: calc(50% - 20px); /* Updated width to less than half of the page */
+  padding: 8px;
+  margin-top: 6px; /* Decreased margin */
+  margin-bottom: 10px; /* Decreased margin */
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #555; /* Updated text color for input fields */
+}
+
+/* Style the list of components */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style each component in the list */
+li {
+  margin-bottom: 6px; /* Decreased margin */
+}
+
+/* Apply some spacing to the page */
+body {
+  padding: 10px; /* Decreased padding */
+}
+
+  /* Style for Network Element details */
+  h2, h3, h4 {
+    color: #333; /* Change color as needed */
+  }
+
+  strong {
+    color: #0066cc; /* Change color as needed */
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    color: #009900; /* Change color as needed */
+  }
+
+  /* Style for form labels */
+  label {
+    display: block;
+    margin-top: 10px;
+    color: #990000; /* Change color as needed */
+  }
+
+  /* Style for input fields */
+  input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Style for buttons */
+  button {
+    background-color: #3399ff; /* Change color as needed */
+    color: #fff; /* Change color as needed */
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Style for horizontal line */
+  hr {
+    border: 1px solid #ccc; /* Change color as needed */
+    margin: 20px 0;
+  }
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h2>Network Elements</h2><div *ngFor="let element of networkElements">  <div>    <h3>Network Element</h3>    <strong>Name:</strong>    {{ element.name }}<br>        <strong>Type:</strong>    {{ element.type }}<br>        <strong>IP Address:</strong>    {{ element.ipAddress }}<br>            <strong>Model:</strong>    {{ element.model }}<br>        <strong>Manufacturer:</strong>{{ element.manufacturer }}    <h4>Components</h4>    <ul>      <li *ngFor="let component of element.components">{{ component.componentName }}</li>    </ul>    <h4>Connected Elements</h4>    <ul>      <li *ngIf="element.type === \'Router\'">ONT-1,OLT-1</li>      <li *ngIf="element.type === \'ONT\'">OLT-1</li>      <li *ngIf="element.type === \'OLT\'">ONT-1, Router-1</li>     </ul>          <form (submit)="addComponent(element.id)">    <label for="componentName">Component Name:</label>    <input type="text" id="componentName" [(ngModel)]="newComponent.componentName"  [ngModelOptions]="{standalone: true}" required />    <button type="submit">Add Component</button>  </form></div><hr /><form (submit)="addNetworkElement()">  <h3>Add Network Element</h3>  <label for="name">Name:</label>  <input type="text" id="name"  [(ngModel)]="newNetworkElement.name"  [ngModelOptions]="{standalone: true}" required />  <label for="name">Type:</label>   <input type="text" id="type"  [(ngModel)]="newNetworkElement.type"  [ngModelOptions]="{standalone: true}" required />   <label for="name">IpAddress:</label>    <input type="text" id="ipAddress"  [(ngModel)]="newNetworkElement.ipAddress"  [ngModelOptions]="{standalone: true}" required />    <label for="name">Model:</label>    <input type="text" id="model"  [(ngModel)]="newNetworkElement.model"  [ngModelOptions]="{standalone: true}" required />    <label for="name">Manufacturer:</label>    <input type="text" id="manufacturer"  [(ngModel)]="newNetworkElement.manufacturer"  [ngModelOptions]="{standalone: true}" required />  <button type="submit">Add Network Element</button></form>  </div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssignedTicketsComponent', 'selector': 'app-assigned-tickets'},{'name': 'ConnectivityComponent', 'selector': 'app-connectivity'},{'name': 'HardwareGroupComponent', 'selector': 'app-hardware-group'},{'name': 'IncidentComponent', 'selector': 'app-incident'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MyListComponent', 'selector': 'app-my-list'},{'name': 'NavBarComponent', 'selector': 'app-nav-bar'},{'name': 'NetworkElementComponent', 'selector': 'app-network-element'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SlaComponent', 'selector': 'app-sla'},{'name': 'StatusComponent', 'selector': 'app-status'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'NetworkElementComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NetworkElementComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
