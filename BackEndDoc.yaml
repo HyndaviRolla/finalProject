@@ -1,0 +1,533 @@
+ openapi: 3.0.1
+ info:
+   title: OpenAPI definition
+   version: v0
+ servers:
+   - url: http://localhost:8080
+     description: Generated server url
+ security:
+   - Bearer Authentication: []
+ paths:
+   /api/incidents/updateStatus/{incidentId}:
+     put:
+       tags:
+         - incident-controller
+       operationId: updateIncidentStatus
+       parameters:
+         - name: incidentId
+           in: path
+           required: true
+           schema:
+             type: integer
+             format: int64
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 type: object
+   /api/incidents/incidents/{id}/resolution:
+     put:
+       tags:
+         - incident-controller
+       operationId: updateIncidentResolution
+       parameters:
+         - name: id
+           in: path
+           required: true
+           schema:
+             type: integer
+             format: int64
+       requestBody:
+         content:
+           application/json:
+             schema:
+               $ref: '#/components/schemas/ResolutionRequest'
+         required: true
+       responses:
+         '200':
+           description: OK
+   /api/network-elements:
+     get:
+       tags:
+         - network-element-controller
+       operationId: getAllNetworkElements
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 type: array
+                 items:
+                   $ref: '#/components/schemas/NetworkElement'
+     post:
+       tags:
+         - network-element-controller
+       operationId: addNetworkElement
+       requestBody:
+         content:
+           application/json:
+             schema:
+               $ref: '#/components/schemas/NetworkElement'
+         required: true
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 $ref: '#/components/schemas/NetworkElement'
+   /api/network-elements/{id}/add-component:
+     post:
+       tags:
+         - network-element-controller
+       operationId: addComponentToNetworkElement
+       parameters:
+         - name: id
+           in: path
+           required: true
+           schema:
+             type: integer
+             format: int64
+       requestBody:
+         content:
+           application/json:
+             schema:
+               $ref: '#/components/schemas/Component'
+         required: true
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 $ref: '#/components/schemas/NetworkElement'
+   /api/incidents:
+     post:
+       tags:
+         - incident-controller
+       operationId: createIncident
+       requestBody:
+         content:
+           application/json:
+             schema:
+               $ref: '#/components/schemas/Incident'
+         required: true
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 $ref: '#/components/schemas/Incident'
+   /api/incidents/{incidentId}/assign-to-self:
+     post:
+       tags:
+         - incident-controller
+       operationId: assignIncidentToSelf
+       parameters:
+         - name: incidentId
+           in: path
+           required: true
+           schema:
+             type: integer
+             format: int64
+         - name: currentUser
+           in: query
+           required: true
+           schema:
+             type: string
+         - name: currentUserEmail
+           in: query
+           required: true
+           schema:
+             type: string
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 $ref: '#/components/schemas/Incident'
+   /api/incidents/forward/{incidentId}:
+     post:
+       tags:
+         - incident-controller
+       operationId: forwardIncident
+       parameters:
+         - name: incidentId
+           in: path
+           required: true
+           schema:
+             type: integer
+             format: int64
+       requestBody:
+         content:
+           application/json:
+             schema:
+               $ref: '#/components/schemas/ForwardingRequest'
+         required: true
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 $ref: '#/components/schemas/Incident'
+   /api/auth/token:
+     post:
+       tags:
+         - api-auth-controller
+       operationId: token
+       requestBody:
+         content:
+           application/json:
+             schema:
+               $ref: '#/components/schemas/LoginBody'
+         required: true
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 $ref: '#/components/schemas/TokenDTO'
+   /api/network-elements/{name}:
+     get:
+       tags:
+         - network-element-controller
+       operationId: getNetworkElementByName
+       parameters:
+         - name: name
+           in: path
+           required: true
+           schema:
+             type: string
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 $ref: '#/components/schemas/NetworkElement'
+   /api/incidents/{currentUser}/getAssignedTickets:
+     get:
+       tags:
+         - incident-controller
+       operationId: getAssignedTickets
+       parameters:
+         - name: currentUser
+           in: path
+           required: true
+           schema:
+             type: string
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 type: array
+                 items:
+                   $ref: '#/components/schemas/Incident'
+   /api/incidents/user/{userName}:
+     get:
+       tags:
+         - incident-controller
+       operationId: getIncidentsByUserName
+       parameters:
+         - name: userName
+           in: path
+           required: true
+           schema:
+             type: string
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 type: array
+                 items:
+                   $ref: '#/components/schemas/Incident'
+   /api/incidents/status/{status}:
+     get:
+       tags:
+         - incident-controller
+       operationId: getIncidentsByStatus
+       parameters:
+         - name: status
+           in: path
+           required: true
+           schema:
+             type: string
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 type: array
+                 items:
+                   $ref: '#/components/schemas/Incident'
+   /api/incidents/search:
+     get:
+       tags:
+         - incident-controller
+       operationId: searchIncidents
+       parameters:
+         - name: id
+           in: query
+           required: false
+           schema:
+             type: integer
+             format: int64
+         - name: userName
+           in: query
+           required: false
+           schema:
+             type: string
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 type: array
+                 items:
+                   $ref: '#/components/schemas/Incident'
+   /api/incidents/network-elements:
+     get:
+       tags:
+         - incident-controller
+       operationId: getNetworkElements
+       parameters:
+         - name: search
+           in: query
+           required: true
+           schema:
+             type: string
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 type: array
+                 items:
+                   $ref: '#/components/schemas/NetworkElement'
+   /api/incidents/forwarded/{group}:
+     get:
+       tags:
+         - incident-controller
+       operationId: getForwardedIncidents
+       parameters:
+         - name: group
+           in: path
+           required: true
+           schema:
+             type: string
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 type: array
+                 items:
+                   $ref: '#/components/schemas/Incident'
+   /api/incidents/due-today:
+     get:
+       tags:
+         - incident-controller
+       operationId: getIncidentsDueToday
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 type: array
+                 items:
+                   $ref: '#/components/schemas/Incident'
+   /api/incidents/components/{networkElementId}:
+     get:
+       tags:
+         - incident-controller
+       operationId: getComponents
+       parameters:
+         - name: networkElementId
+           in: path
+           required: true
+           schema:
+             type: integer
+             format: int64
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 type: array
+                 items:
+                   $ref: '#/components/schemas/Component'
+   /api/incidents/assigned-group/{assignmentGroup}:
+     get:
+       tags:
+         - incident-controller
+       operationId: getIncidentsByAssignmentGroup
+       parameters:
+         - name: assignmentGroup
+           in: path
+           required: true
+           schema:
+             type: string
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 type: array
+                 items:
+                   $ref: '#/components/schemas/Incident'
+   /:
+     get:
+       tags:
+         - Clients
+       summary: This method is used to get the clients.
+       operationId: getClients_1
+       responses:
+         '200':
+           description: OK
+           content:
+             '*/*':
+               schema:
+                 type: array
+                 items:
+                   type: string
+ components:
+   schemas:
+     ResolutionRequest:
+       type: object
+       properties:
+         resolution:
+           type: string
+     Component:
+       type: object
+       properties:
+         id:
+           type: integer
+           format: int64
+         componentName:
+           type: string
+     NetworkElement:
+       type: object
+       properties:
+         id:
+           type: integer
+           format: int64
+         name:
+           type: string
+         type:
+           type: string
+         ipAddress:
+           type: string
+         manufacturer:
+           type: string
+         model:
+           type: string
+         components:
+           type: array
+           items:
+             $ref: '#/components/schemas/Component'
+         relatedNetworkElements:
+           type: array
+           items:
+             $ref: '#/components/schemas/RelatedNetworkElement'
+     RelatedNetworkElement:
+       type: object
+       properties:
+         id:
+           type: integer
+           format: int64
+     Incident:
+       type: object
+       properties:
+         id:
+           type: integer
+           format: int64
+         networkElement:
+           $ref: '#/components/schemas/NetworkElement'
+         component:
+           $ref: '#/components/schemas/Component'
+         description:
+           type: string
+         issueType:
+           type: string
+         severity:
+           type: string
+         priority:
+           type: string
+         createdTime:
+           type: string
+         resolution:
+           type: string
+         userEmailId:
+           type: string
+         slaStartTime:
+           type: string
+           format: date-time
+         slaEndTime:
+           type: string
+         slaBreached:
+           type: boolean
+         assignmentGroup:
+           type: string
+         forwardingmessage:
+           type: string
+         forwardedTo:
+           type: string
+         forwarded:
+           type: boolean
+         status:
+           type: string
+         user:
+           type: string
+         assignedTo:
+           type: string
+         assignedTeamEmail:
+           type: string
+     ForwardingRequest:
+       type: object
+       properties:
+         targetGroup:
+           type: string
+         message:
+           type: string
+     LoginBody:
+       type: object
+       properties:
+         username:
+           type: string
+         password:
+           type: string
+     TokenDTO:
+       type: object
+       properties:
+         token:
+           type: string
+         username:
+           type: string
+         role:
+           type: string
+         email:
+           type: string
+   securitySchemes:
+     Bearer Authentication:
+       type: http
+       scheme: bearer
+       bearerFormat: JWT
+ 
